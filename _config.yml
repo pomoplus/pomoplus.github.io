@@ -2,6 +2,19 @@ title: Pomo+ Documentation
 description: Terms of Service and Privacy Policy for Pomo+
 theme: jekyll-theme-cayman
 
+# 确保Jekyll正确处理所有文件
+plugins:
+  - jekyll-sitemap
+
+# 定义Markdown处理
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# 确保正确的URL结构
+permalink: /:path/
+
 defaults:
   - scope:
       path: ""
