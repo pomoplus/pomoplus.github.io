@@ -5,48 +5,50 @@ title: Pomo+ Documentation
 
 # Welcome to Pomo+
 
-<div id="manual-language-selection" style="display:none;">
-  <h2>Choose your language / 选择语言:</h2>
+<div id="document-selection">
+  <h2>Choose a document / 选择文档:</h2>
   <ul>
-    <li><a href="/terms/en" id="english-link">English Documentation</a></li>
-    <li><a href="/terms/zh" id="chinese-link">中文文档</a></li>
+    <li><a href="/terms?noredirect=true">Terms of Service / 服务条款</a></li>
+    <li><a href="/privacy?noredirect=true">Privacy Policy / 隐私政策</a></li>
   </ul>
 </div>
 
 <script>
   // 检测浏览器语言
-  function detectLanguage() {
+  function redirectToLocalized(basePath) {
     var language = navigator.language || navigator.userLanguage;
     language = language.toLowerCase();
     
     // 如果浏览器语言是中文的任何变体，则显示中文
     // 否则默认显示英文（大多数情况）
     if (language.startsWith('zh')) {
-      window.location.href = '/terms/zh';
+      window.location.href = basePath + '/zh';
     } else {
       // 默认使用英文
-      window.location.href = '/terms/en';
+      window.location.href = basePath + '/en';
     }
   }
   
-  // 页面加载时执行语言检测
-  window.onload = function() {
-    // 如果URL中有参数noredirect=true，则不自动重定向
-    if (window.location.search.indexOf('noredirect=true') === -1) {
-      detectLanguage();
-    } else {
-      // 显示手动选择选项
-      document.getElementById('manual-language-selection').style.display = 'block';
-    }
-  };
+  // 检查URL是否有指定文档类型参数
+  var urlParams = new URLSearchParams(window.location.search);
+  var noRedirect = urlParams.get('noredirect');
+  var docType = window.location.pathname;
+  
+  if (!noRedirect && (docType === '/terms' || docType === '/terms/')) {
+    redirectToLocalized('/terms');
+  } else if (!noRedirect && (docType === '/privacy' || docType === '/privacy/')) {
+    redirectToLocalized('/privacy');
+  }
 </script>
 
 <noscript>
   <!-- 当JavaScript被禁用时显示 -->
   <h2>Choose your language / 选择语言:</h2>
   <ul>
-    <li><a href="/terms/en">English Documentation</a></li>
-    <li><a href="/terms/zh">中文文档</a></li>
+    <li><a href="/terms/en">Terms of Service (English)</a></li>
+    <li><a href="/terms/zh">服务条款 (中文)</a></li>
+    <li><a href="/privacy/en">Privacy Policy (English)</a></li>
+    <li><a href="/privacy/zh">隐私政策 (中文)</a></li>
   </ul>
 </noscript>
 
