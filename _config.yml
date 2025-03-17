@@ -1,0 +1,9 @@
+title: Pomo+ Documentation
+description: Terms of Service and Privacy Policy for Pomo+
+theme: jekyll-theme-cayman
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default 
