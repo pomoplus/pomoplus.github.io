@@ -38,6 +38,8 @@ We use the collected information to:
 - All data is stored securely using industry-standard encryption
 - Personal data is stored on secure servers
 - We implement appropriate security measures to protect your information
+- Data is processed and stored in compliance with GDPR and App Store guidelines
+- Users can request complete deletion of their data by contacting us
 
 ## 5. Data Sharing
 
@@ -57,7 +59,12 @@ You have the right to:
 
 ## 7. Children's Privacy
 
-Our app is not intended for children under 13. We do not knowingly collect information from children under 13.
+Pomo+ is a focus app designed for users of all ages. For users under 13, we recommend using the app under parental or guardian supervision. We will:
+
+- Ensure app content is suitable for all age groups
+- Not collect personal identification information from child users
+- Recommend parental supervision for users under 13
+- Immediately delete any personal information if we discover it was inadvertently collected from children
 
 ## 8. Changes to Privacy Policy
 
