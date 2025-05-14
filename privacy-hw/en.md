@@ -5,8 +5,8 @@ title: Privacy Policy - Mango Focus
 
 # Mango Focus Privacy Policy
 
-## Update Date: May 01, 2024
-## Effective Date: May 01, 2024
+## Update Date: May 01, 2025
+## Effective Date: May 01, 2025
 
 This Privacy Policy applies to Mango Focus (hereinafter referred to as "we") and its related services.
 
